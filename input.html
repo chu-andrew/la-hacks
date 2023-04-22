@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Auto-Itinerary</title>
+<!-- Ctrl + space for all the possible options -->
+<style>
+body {
+	background-color: sand;
+	background-image: url("https://th.bing.com/th/id/OIP.Ihlflmu84jNLfnYgr4E8cQHaFJ?w=219&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7");
+	background-size: 150px 200px;
+	font-family: Verdana;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.25rem;
+	color: rebeccapurple;
+	padding-left: 200px;
+}
+h1 {
+	font-family: Georgia;
+	color: darkred;
+}
+h3 {
+	font-family: Arial;
+	color: saddlebrown;
+}
+p {
+	font-family: Times New Roman;
+	color: black;
+	font-size: 0.75rem;
+}
+</style>
+</head>
+<body>
+<h1>Come Design Your Dream Vacation</h1>
+<form method="get" action="/cgi-bin/tripadvisor.py" name="places">
+What City Will You Be Visiting? <input type="text" name="city" size="25" />
+<p>List of <span id="test">popular destinations</span> can be found on <a href="http://www.tripadvisor.com" target=_blank>tripadvisor.com</a> and <a href="http://www.yelp.com" target=_blank>yelp</a></p>
+<!-- <h3>How Many Days Will You Play?</h3>
+<input type="radio" name="days" value="one" checked />
+One Day 
+<input type="radio" name="days" value="two" />
+Two Days 
+<input type="radio" name="days" value="three" />
+Three Days
+
+<h3>Which Types Are You Interested In?</h3>
+<table>
+	<tr>
+		<td>
+			<input type="checkbox" name="amusementpark" checked="checked" />
+			Amusement and Theme Parks
+		</td>
+		<td><input type="checkbox" name="museum" />
+Specialty Museums</td>
+		<td><input type="checkbox" name="observatory" />
+Observatories and Planetariums</td>
+	</tr>
+	<tr><td><input type="checkbox" name="pointofinterest" />
+Points of Interest and Landmarks
+	</td>
+<td><input type="checkbox" name="architecture" />
+Architectural Buildings
+</td>
+<td><input type="checkbox" name="landmark" />
+Landmarks</td>
+</tr>
+	<tr>
+		<td><input type="checkbox" name="military" />
+Military Museums</td>
+		<td><input type="checkbox" name="history" />
+Natural History Museums</td>
+		<td><input type="checkbox" name="science" />
+Science Museums</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="park" />
+Parks</td>
+		<td><input type="checkbox" name="arena" />
+Arenas and Stadiums</td>
+		<td><input type="checkbox" name="art" />
+Art Museums</td>
+	</tr>
+</table>
+<br /> -->
+
+<input type="submit" value="Click Here to Submit" />
+<input type="reset" value="Erase and Start Over" />
+</form>
+<!-- This will contain the auto-generated itinerary. Ctrl + slash to insert comment -->
+<!-- <iframe src="output.html" width=1000px height=1000px></iframe> -->
+</body>
+<script>
+	console.log("Hello World!");
+
+	let thing = document.getElementById("test")
+
+	thing.addEventListener("click", () => {
+		console.log("clicked")
+	})
+</script>
+</html>
