@@ -22,6 +22,7 @@ def my_form_post():
     dinner_results = yelp.search_yelp("dinner", text1)
     day_results = yelp.search_yelp(request.form['day'], text1)
     afternoon_results = yelp.search_yelp(request.form['afternoon'], text1)
+    brunch = request.form.getlist("brunch")
     if len(results) == 0:
         return "No results found."
     else:
@@ -30,11 +31,17 @@ def my_form_post():
         dinner = dinner_results[random.randint(0, 9)]
         day = day_results[random.randint(0, 9)]
         afternoon = afternoon_results[random.randint(0, 9)]
-        return f'''You Will Eat Breakfast At: {breakfast.name} --- {breakfast.rating} STARS ({breakfast.review_count}) {breakfast.url}<br />
-            Then You Will Visit: {day.name} --- {day.rating} STARS ({day.review_count}) {day.url}<br />
-            You Will Eat Lunch At: {lunch.name} --- {lunch.rating} STARS ({lunch.review_count}) {lunch.url}<br />
-            Then You Will Visit: {afternoon.name} --- {afternoon.rating} STARS ({afternoon.review_count}) {afternoon.url}<br />
-            You Will Eat Dinner At: {dinner.name} --- {dinner.rating} STARS ({dinner.review_count}) {dinner.url}'''
+        if len(brunch) > 0:
+            return f'''You Will Visit: {day.name} --- {day.rating} STARS ({day.review_count}) {day.url}<br />
+                You Will Eat Brunch At: {lunch.name} --- {lunch.rating} STARS ({lunch.review_count}) {lunch.url}<br />
+                Then You Will Visit: {afternoon.name} --- {afternoon.rating} STARS ({afternoon.review_count}) {afternoon.url}<br />
+                You Will Eat Dinner At: {dinner.name} --- {dinner.rating} STARS ({dinner.review_count}) {dinner.url}''' 
+        else:
+            return f'''You Will Eat Breakfast At: {breakfast.name} --- {breakfast.rating} STARS ({breakfast.review_count}) {breakfast.url}<br />
+                Then You Will Visit: {day.name} --- {day.rating} STARS ({day.review_count}) {day.url}<br />
+                You Will Eat Lunch At: {lunch.name} --- {lunch.rating} STARS ({lunch.review_count}) {lunch.url}<br />
+                Then You Will Visit: {afternoon.name} --- {afternoon.rating} STARS ({afternoon.review_count}) {afternoon.url}<br />
+                You Will Eat Dinner At: {dinner.name} --- {dinner.rating} STARS ({dinner.review_count}) {dinner.url}'''
 
 if __name__ == '__main__':
     app.run()
