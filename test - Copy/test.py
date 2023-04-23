@@ -81,7 +81,7 @@ def my_form_post():
             color: hotpink;
         }</style>'''
 
-    out = f"{out} <h1>{location.lower()}</h1>"
+    out = f"{out} <h1>{location.lower()} &hearts;</h1>"
 
     for x in range(0, int(nights) + 1):
         breakfast = breakfast_search[random.randint(0, 9)]
