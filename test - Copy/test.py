@@ -52,7 +52,7 @@ def my_form_post():
             color: saddlebrown;
         }
         p {
-            font-family: Times New Roman;
+            font-family: Arial;
             color: lightgrey;
             font-size: 0.75rem;
         }
@@ -63,7 +63,7 @@ def my_form_post():
             border-color: darkgrey;
             height: 50px;
             width: 200px;
-            font: bold15px arial;
+            font: bold15px arial narrow;
             text-shadow: none;
 
         }
