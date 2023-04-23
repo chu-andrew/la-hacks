@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Auto-Itinerary</title>
+     <style>
+        body {
+            background-color: black;
+            font-family: Verdana;
+            font-size: 1.25rem;
+            color: rebeccapurple;
+            padding-left: 200px;
+        }
+        h1 {
+            font-family: Arial Narrow;
+            color: rebeccapurple;
+            font-stretch: condensed;
+            font-weight: bold;
+            font-size: 7rem;
+        }
+        h3 {
+            font-family: Arial;
+            color: saddlebrown;
+        }
+        p {
+            font-family: Times New Roman;
+            color: lightgrey;
+            font-size: 0.75rem;
+        }
+        #submit {
+            background: mediumpurple;
+            color: white;
+            border-style: outset;
+            border-color: darkgrey;
+            height: 50px;
+            width: 200px;
+            font: bold15px arial;
+            text-shadow: none;
+
+        }
+        #select {
+            background-color: lightgrey;
+            font-family: Georgia;
+        }
+     </style>
+</head>
+<body>
+    <h1>dream vacation</h1>
+    <h3>come design your dream vacation.</h3>
+    <form action="." method="POST">
+    What City Will You Be Visiting? <input type="text" name="city" size=25 value="Los Angeles, CA" id="select" />
+    What Do You Want to Do During the Day? 
+    <select name="day" id="select">
+        <option selected>museum</option>
+        <option>hiking</option>
+        <option>park</option>
+        <option>stadium</option>
+        <option>shopping</option>
+        <option>landmark</option>
+        <option>amusement park</option>
+    </select>
+    <br />
+    What Do You Want to Do During the Afternoon?
+    <select name="afternoon" id="select">
+        <option selected>museum</option>
+        <option>hiking</option>
+        <option>park</option>
+        <option>stadium</option>
+        <option>shopping</option>
+        <option>landmark</option>
+        <option>amusement park</option>
+    </select>
+    <br />
+    <p>Brunch? <input type="checkbox" name="brunch" id="select" /></p>
+    <p>How Many Nights? <input type="radio" name="nights" value="0" checked id="select" />0 <input type="radio" name="nights" value="1" id="select" />1 <input type="radio" name="nights" value="2" id="select" />2</p>
+    <input type="submit" name="my-form" value="Click Here to Submit" id="submit" /> <input type="reset" value="Reset All Fields" id="submit" />
+    </form>
+</body>
+</html>
