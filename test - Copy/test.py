@@ -34,31 +34,52 @@ def my_form_post():
     nights = request.form['nights']
 
     out = '''<style>body {
-                    background-color: sand;
-                    background-image: url("https://th.bing.com/th/id/OIP.Ihlflmu84jNLfnYgr4E8cQHaFJ?w=219&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7");
-                    background-size: 150px 200px;
-                    font-family: Verdana;
-                    font-weight: bold;
-                    font-style: italic;
-                    font-size: 1.25rem;
-                    color: rebeccapurple;
-                    padding-left: 200px;
-                }
-                h1 {
-                    font-family: Georgia;
-                    color: darkred;
-                }
-                h3 {
-                    font-family: Arial;
-                    color: saddlebrown;
-                }
-                p {
-                    font-family: Times New Roman;
-                    color: black;
-                    font-size: 0.75rem;
-                }</style>'''
+            background-color: black;
+            font-family: Verdana;
+            font-size: 1.25rem;
+            color: rebeccapurple;
+            padding-left: 200px;
+        }
+        h1 {
+            font-family: Arial Narrow;
+            color: rebeccapurple;
+            font-stretch: condensed;
+            font-weight: bold;
+            font-size: 7rem;
+        }
+        h3 {
+            font-family: Arial;
+            color: saddlebrown;
+        }
+        p {
+            font-family: Times New Roman;
+            color: lightgrey;
+            font-size: 0.75rem;
+        }
+        #submit {
+            background: mediumpurple;
+            color: white;
+            border-style: outset;
+            border-color: darkgrey;
+            height: 50px;
+            width: 200px;
+            font: bold15px arial;
+            text-shadow: none;
 
-    out = f"{out} <h1>Your Itinerary for Your Trip to {location}</h1>"
+        }
+        #select {
+            background-color: lightgrey;
+            font-family: Georgia;
+        }
+        a:visited, a:active, a:link {
+            text-decoration: none;
+            color: purple;
+        }
+        a:hover {
+            color: hotpink;
+        }</style>'''
+
+    out = f"{out} <h1>{location.lower()}</h1>"
 
     for x in range(0, int(nights) + 1):
         breakfast = breakfast_search[random.randint(0, 9)]
